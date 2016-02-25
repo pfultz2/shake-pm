@@ -20,7 +20,7 @@ def load_env(d):
     data = yaml.load(open(f))
     e = Environment()
     e.path = d
-    e.channels = list(data.channels)
+    e.channels = list(data['channels'])
     # e.toolchains = dict(data.toolchains)
     return e
 

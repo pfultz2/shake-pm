@@ -17,7 +17,7 @@ def load_package(f):
     p.version = data['version']
     p.url = data['url']
     p.sha1 = data['sha1']
-    p.depends = list(data['depends'])
+    if 'depends' in data: p.depends = list(data['depends'])
     # for name, builder in data['build']:
 
     return p

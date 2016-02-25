@@ -13,5 +13,5 @@ class Repository:
         else: self.package_lookup[p.name] = [p.path]
 
     def list(self):
-        return [key for key, value in self.package_lookup]
+        return self.package_lookup
         
